@@ -133,7 +133,7 @@
                     </tr>
                     <tr>
                         <td colspan="2" style="background: #fff;">
-                            <a href="javascript:void(0)" onclick="downloadKhatian()" class="btn">খতিয়ান ডাউনলোড</a>
+                            <a href="mutation-logos/khatian.pdf" download class="btn">খতিয়ান ডাউনলোড</a>
                         </td>
                     </tr>
                 </table>
@@ -197,7 +197,6 @@
     </div>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script>
 function toBengali(n) {
     var b = ['০','১','২','৩','৪','৫','৬','৭','৮','৯'];
@@ -208,58 +207,6 @@ var months = ['জানুয়ারি','ফেব্রুয়ারি',
 var now = new Date();
 document.getElementById('current-date').textContent = 
     days[now.getDay()] + ', ' + toBengali(now.getDate()) + ' ' + months[now.getMonth()] + ' ' + toBengali(now.getFullYear());
-
-function downloadKhatian() {
-    var doc = new jspdf.jsPDF();
-    
-    // Try to use Bengali font if available
-    doc.setFontSize(18);
-    doc.text("Land Mutation Information", 105, 20, {align: "center"});
-    
-    doc.setFontSize(12);
-    doc.text("Mutation Case Details", 105, 30, {align: "center"});
-    
-    // Draw table
-    var y = 45;
-    var data = [
-        ["Land Office Address", "Durgapur, Paba, Rajshahi"],
-        ["Khatian No", "2026-100002"],
-        ["Application No", "8286228"],
-        ["Application Date", "15-06-2026"],
-        ["Mutation Case No", "4006(IX-I)/2026"],
-        ["Mutation Order Date", "15/06/2026"],
-        ["DCR No", "DCR25815316104006"],
-        ["Applicant Name", "1) Md. Babu Mia\n2) Mos. Rahima Khatun"],
-        ["Address", "Village: Chaugacha, PO: Bargarh,\nUpazila: Paba, District: Rajshahi"]
-    ];
-    
-    doc.setFillColor(0, 104, 77);
-    doc.setTextColor(255, 255, 255);
-    doc.setFontSize(11);
-    doc.rect(15, y, 180, 10, 'F');
-    doc.text("MUTATION INFORMATION", 20, y + 7);
-    y += 12;
-    
-    doc.setTextColor(0, 0, 0);
-    doc.setFontSize(10);
-    
-    for (var i = 0; i < data.length; i++) {
-        doc.setFillColor(245, 245, 245);
-        doc.rect(15, y, 60, 10, 'FD');
-        doc.rect(75, y, 120, 10, 'D');
-        doc.text(data[i][0], 20, y + 7);
-        doc.text(data[i][1], 80, y + 7);
-        y += 10;
-    }
-    
-    y += 15;
-    doc.setFontSize(9);
-    doc.text("Signed: Nazabayda Sultana, Assistant Commissioner (Land), Paba, Rajshahi", 195, y, {align: "right"});
-    y += 8;
-    doc.text("Date: 15/06/2026", 195, y, {align: "right"});
-    
-    doc.save("khatian-mutation-2026.pdf");
-}
 </script>
 
 </body>
