@@ -64,20 +64,6 @@
             table td:first-child { width: 45%; }
         }
     </style>
-    <script>
-        function toBengali(n) {
-            var b = ['০','১','২','৩','৪','৫','৬','৭','৮','৯'];
-            return String(n).split('').map(function(d){ return b[parseInt(d)] }).join('');
-        }
-        function setCurrentDate() {
-            var days = ['রবিবার','সোমবার','মঙ্গলবার','বুধবার','বৃহস্পতিবার','শুক্রবার','শনিবার'];
-            var months = ['জানুয়ারি','ফেব্রুয়ারি','মার্চ','এপ্রিল','মে','জুন','জুলাই','আগস্ট','সেপ্টেম্বর','অক্টোবর','নভেম্বর','ডিসেম্বর'];
-            var now = new Date();
-            document.getElementById('current-date').textContent = 
-                days[now.getDay()] + ', ' + toBengali(now.getDate()) + ' ' + months[now.getMonth()] + ' ' + toBengali(now.getFullYear());
-        }
-        setCurrentDate();
-    </script>
 </head>
 <body>
 
@@ -210,6 +196,18 @@
         <h6>পরীক্ষামূলক সংস্করণ</h6>
     </div>
 </footer>
+
+<script>
+function toBengali(n) {
+    var b = ['০','১','২','৩','৪','৫','৬','৭','৮','৯'];
+    return String(n).split('').map(function(d){ return b[parseInt(d)] }).join('');
+}
+var days = ['রবিবার','সোমবার','মঙ্গলবার','বুধবার','বৃহস্পতিবার','শুক্রবার','শনিবার'];
+var months = ['জানুয়ারি','ফেব্রুয়ারি','মার্চ','এপ্রিল','মে','জুন','জুলাই','আগস্ট','সেপ্টেম্বর','অক্টোবর','নভেম্বর','ডিসেম্বর'];
+var now = new Date();
+document.getElementById('current-date').textContent = 
+    days[now.getDay()] + ', ' + toBengali(now.getDate()) + ' ' + months[now.getMonth()] + ' ' + toBengali(now.getFullYear());
+</script>
 
 </body>
 </html>
