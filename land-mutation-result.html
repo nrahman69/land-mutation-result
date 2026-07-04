@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <title>জাতীয় ভূমি-তথ্য ও সেবা কাঠামো</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Noto Sans Bengali', sans-serif; font-size: 14px; color: #333; background: #f0f2f5; }
+        
+        /* Header */
+        .main-header { background: #fff; border-bottom: 1px solid #E1E1E1; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; padding: 0 15px; height: 78px; max-width: 1170px; margin: 0 auto; }
+        .logo-land-mutation { display: flex; align-items: center; gap: 20px; height: 100%; }
+        .logo-land-mutation img { display: block; }
+        .top-date { display: flex; align-items: center; gap: 8px; font-size: 14px; color: #333; }
+        .top-date .cal-icon { width: 18px; height: 18px; }
+        
+        /* Main */
+        .container { max-width: 1170px; margin: 0 auto; padding: 0 15px; }
+        .inner_wrapper { padding: 25px 0; }
+        .contact-us { min-height: 400px; }
+        .khotian_print_large { width: 99%; padding: 0 1%; }
+        
+        /* Table */
+        table { width: 100%; border-collapse: collapse; border: 1px solid #e3e3e3; }
+        table td { padding: 10px 15px; font-size: 17px; border: 1px solid #e3e3e3; vertical-align: top; }
+        table td:first-child { width: 50%; background: #f9f9f9; font-weight: 400; }
+        
+        /* Button */
+        .btn { display: inline-block; padding: 8px 20px; background: #5cb85c; color: #fff !important; text-decoration: none !important; border: 1px solid #4cae4c; border-radius: 4px; font-size: 17px; cursor: pointer; }
+        .btn:hover { background: #449d44; }
+        
+        /* Footer */
+        .land-smart-mutation-footer { background: #00684D; color: #fff; padding: 25px 0 0; margin-top: 30px; }
+        .footer-top-sec { max-width: 1080px; margin: 0 auto; padding: 0 15px; }
+        .row { display: flex; flex-wrap: wrap; margin: 0 -15px; }
+        .col-lg-3 { flex: 0 0 25%; max-width: 25%; padding: 0 15px; margin-bottom: 20px; }
+        .footer-item { margin-bottom: 20px; }
+        .footer-title { font-size: 16px; font-weight: 700; color: #f1c40f !important; margin-bottom: 10px; }
+        .footer-menu { list-style: none; padding: 0; margin: 0; }
+        .footer-menu li { padding: 5px 0; }
+        .footer-menu li a { color: #fff !important; text-decoration: none; font-size: 13px; }
+        .footer-menu li a:hover { color: #f1c40f !important; }
+        .footer-logo-group { display: flex; flex-direction: column; gap: 15px; }
+        .footer-logo-group .logo-box { display: inline-block; }
+        .footer-logo-group .logo-box .flag { width: 45px; height: 30px; background: linear-gradient(180deg, #006A4E 0%, #006A4E 100%); border: 1px solid #fff; position: relative; display: inline-block; }
+        .footer-logo-group .logo-box .flag::after { content: ""; position: absolute; top: 50%; left: 45%; transform: translate(-50%, -50%); width: 16px; height: 16px; background: #F42A41; border-radius: 50%; }
+        .footer-logo-group .logo-box .govt { color: #f1c40f; font-size: 11px; font-weight: 700; }
+        .footer-bottom-sec { text-align: center; padding: 20px 15px; border-top: 1px solid rgba(255,255,255,0.3); margin-top: 15px; }
+        .footer-bottom-sec p { font-size: 13px; margin-bottom: 5px; color: #fff; }
+        .footer-bottom-sec h6 { font-size: 13px; font-weight: 700; color: #000; }
+        .footer-app-logo { display: flex; justify-content: center; margin-bottom: 10px; }
+        .footer-app-logo a { display: inline-flex; align-items: center; gap: 8px; background: #fff; color: #00684D !important; padding: 8px 16px; border-radius: 30px; text-decoration: none; font-size: 14px; font-weight: 600; }
+        .footer-app-logo a .app-icon-box { width: 32px; height: 32px; background: #00684D; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 14px; }
+        
+        @media (max-width: 768px) {
+            .header-content { flex-direction: column; height: auto; padding: 10px 15px; gap: 5px; }
+            .col-lg-3 { flex: 0 0 100%; max-width: 100%; }
+            table td { font-size: 14px; padding: 8px 10px; }
+            table td:first-child { width: 45%; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="main-header">
+    <div class="container">
+        <div class="header-content">
+            <div class="logo-land-mutation">
+                <a href="#"><img src="mutation-logos/home-icon.png" alt="Home" style="height:24px"></a>
+                <a href="#"><img src="mutation-logos/land-logo.jpg" alt="Logo" style="max-height:68px"></a>
+            </div>
+            <div class="top-date">
+                <svg class="cal-icon" viewBox="0 0 20 20" fill="#00684D"><path d="M6 2V0H4v2H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-2V0h-2v2H6zM2 8h16v8H2V8z"/></svg>
+                <span>বৃহস্পতিবার, ১৫ জুন ২০২৬</span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<div class="container inner_wrapper">
+    <div class="contact-us">
+        <div class="khotian_print_large">
+            <div style="margin: 0 auto; width: 80%;">
+                <br>
+                <table>
+                    <tr>
+                        <td colspan="2" style="font-weight: bold; background: #fff;">
+                            খতিয়ান এর পূর্ণাঙ্গ তথ্য দেখতে হলে "খতিয়ান ডাউনলোড" বাটনে ক্লিক করে খতিয়ান ডাউনলোড করুন
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ভূমি অফিস এর ঠিকানা</td>
+                        <td>দুর্গাপুর, পবা, রাজশাহী</td>
+                    </tr>
+                    <tr>
+                        <td>খতিয়ান নং</td>
+                        <td>২০২৬-১০০০০২</td>
+                    </tr>
+                    <tr>
+                        <td>আবেদন নম্বর</td>
+                        <td>৮২৮৬২২৮</td>
+                    </tr>
+                    <tr>
+                        <td>আবেদনের তারিখ</td>
+                        <td>১৫-০৬-২০২৬</td>
+                    </tr>
+                    <tr>
+                        <td>মিউটেশন মামলা নং</td>
+                        <td>৪০০৬(IX-I)/২০২৬</td>
+                    </tr>
+                    <tr>
+                        <td>মিউটেশন আদেশের তারিখ</td>
+                        <td>১৫/০৬/২০২৬</td>
+                    </tr>
+                    <tr>
+                        <td>ডি সি আর নং</td>
+                        <td>DCR25815316104006</td>
+                    </tr>
+                    <tr>
+                        <td>আবেদনকারীর নাম ও ঠিকানা</td>
+                        <td>
+                            ১) মোঃ বাবু মিয়া<br>
+                            ২) মোছাঃ রহিমা খাতুন<br>
+                            <span style="font-size: 14px; color: #555;">বাসা/হোল্ডিং: -, গ্রাম/রাস্তা: চৌগাছা, ডাকঘর: বড়গাছি, উপজেলা: পবা, জেলা: রাজশাহী।</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="background: #fff;">
+                            <a href="#" class="btn">খতিয়ান ডাউনলোড</a>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="land-smart-mutation-footer">
+    <div class="footer-top-sec">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="footer-item">
+                    <div class="footer-logo-group">
+                        <a href="#"><img src="mutation-logos/footer-logo1.png" alt="Logo" style="max-height:60px"></a>
+                        <a href="#"><img src="mutation-logos/footer-logo2.png" alt="Logo" style="max-height:60px; margin-top:15px"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="footer-item">
+                    <h3 class="footer-title">মিউটেশন সেবা</h3>
+                    <ul class="footer-menu">
+                        <li><a href="#">মিউটেশন সংক্রান্ত প্রজ্ঞাপন</a></li>
+                        <li><a href="#">মিউটেশন সংক্রান্ত জিজ্ঞাসা</a></li>
+                        <li><a href="#">পরিসংখ্যান</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="footer-item">
+                    <h3 class="footer-title">অন্যান্য</h3>
+                    <ul class="footer-menu">
+                        <li><a href="#">শর্তাবলী</a></li>
+                        <li><a href="#">যোগাযোগ</a></li>
+                        <li><a href="#">উত্তরাধিকার ক্যালকুলেটর</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="footer-item">
+                    <h3 class="footer-title">গুরুত্বপুর্ণ লিংকসমূহ</h3>
+                    <ul class="footer-menu">
+                        <li><a href="https://land.gov.bd/">ভূমি পোর্টাল</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom-sec">
+        <div class="footer-app-logo">
+            <a href="#">
+                <img src="mutation-logos/namjari.png" alt="নামজারি" style="height:40px">
+                নামজারি
+            </a>
+        </div>
+        <p>মিউটেশন অ্যাপস: মিউটেশনের সকল তথ্য এখন হাতের মুঠোয়!</p>
+        <h6>পরীক্ষামূলক সংস্করণ</h6>
+    </div>
+</footer>
+
+</body>
+</html>
